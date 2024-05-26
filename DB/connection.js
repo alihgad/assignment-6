@@ -1,10 +1,7 @@
 import { Sequelize } from "sequelize";
 
 
-export const sequelize = new Sequelize('assignment-6', 'root', '', {
-    host: 'localhost',
-    dialect:  'mysql' 
-  });
+export const sequelize = new Sequelize('mysql://unlv5doqqfnerwxj:tXh2TfuL9bUwrUilJAkn@bctxmkcjfumy1hiwhxex-mysql.services.clever-cloud.com:3306/bctxmkcjfumy1hiwhxex');
 
 
  let connection = async()=>{ await sequelize.sync({alter:false}).then((response) => {
